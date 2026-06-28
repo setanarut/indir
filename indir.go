@@ -1,19 +1,4 @@
 // package indir provides multi-segment parallel HTTP file downloading
-// with resume support, modelled after aria2c's -x and -s flags.
-//
-// Example usage:
-//
-//	d := downloader.New(downloader.Config{
-//	    URL:            "https://example.com/large-file.iso",
-//	    OutputPath:     "large-file.iso",
-//	    MaxConnections: 4,  // aria2c -x 4
-//	    Segments:       8,  // aria2c -s 8
-//	})
-//	if err := d.Download(); err != nil {
-//	    log.Fatal(err)
-//	}
-//
-// Ctrl-C saves progress; running again resumes from where it left off.
 package indir
 
 import (
